@@ -30,7 +30,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in"></span>Login</a>
+                    <a id="login"><span class="fa fa-sign-in"></span>Login</a>
                 </span>
             </div>
                
@@ -74,9 +74,9 @@
     </div>
 
     <div id="Modal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-content" role="content">
+        <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" >
                     <h4 class="modal-label">Reserve a Table</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div> 
@@ -138,7 +138,7 @@
                     <img src="img/logo.png" class="image-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center buton-block">
-                    <a class="nav-link" ><button type="button" data-toggle="modal" data-target="#Modal" class="btn btn-block" style="background-color: gold;">Reserve Table</button></a>
+                    <button type="button" id="reserve"   class="btn btn-block" style="background-color: gold;">Reserve Table</button>
                 </div>
             </div>
         </div>
@@ -302,6 +302,16 @@
             });
         });
     </script>
+    <Script>
+        $(document).ready(function(){
+            $("#reserve").click(function(){
+                $("#Modal").modal();
+            });
+            $("#login").click(function(){
+                $("#loginModal").modal();
+            });
+        });
+    </Script>
 </body>
 
 </html>
